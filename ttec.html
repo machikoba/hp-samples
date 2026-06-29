@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T-tec株式会社｜溶接・製缶・鉄骨加工（架空サンプル）</title>
+<meta name="description" content="溶接・製缶・鉄骨製作のT-tec。図面1枚から、確かな技術でカタチにします。ISO認証取得・有資格者多数。※これはサンプルサイトです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14171a;--graphite:#1c2126;--steel:#2c353d;--steel-l:#3c4751;
+  --paper:#f4f3f1;--paper-2:#e9e6e0;--card:#ffffff;
+  --ember:#d9531e;--ember-d:#a83d12;--ember-l:#e98a4a;
+  --text:#1a1d20;--muted:#5e676d;--line:#dad6cd;--line-d:#36404a;
+  --serif:"Zen Kaku Gothic New",sans-serif;--sans:"Zen Kaku Gothic New","Hiragino Sans",sans-serif;--en:"Oswald",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);background:var(--paper);line-height:1.85;font-weight:400}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 30px}
+.en{font-family:var(--en)}
+
+.sample-bar{background:var(--ember);color:#fff;font-size:12px;letter-spacing:.06em;text-align:center;padding:7px 14px;font-weight:500}
+
+/* header */
+header{position:sticky;top:0;z-index:60;background:rgba(20,23,26,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line-d)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:baseline;gap:12px}
+.brand .logo{font-family:var(--en);font-weight:700;font-size:27px;letter-spacing:.02em;color:#fff}
+.brand .logo b{color:var(--ember)}
+.brand .jp{font-size:11px;letter-spacing:.18em;color:#9aa3ab}
+.menu{display:flex;gap:26px;font-size:13.5px;font-weight:500;color:#d7dce0}
+.menu a:hover{color:var(--ember-l)}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--ember);color:#fff;padding:11px 20px;font-size:13px;font-weight:700;letter-spacing:.03em;transition:background .2s}
+.nav-cta:hover{background:var(--ember-d)}
+
+/* hero */
+.hero{position:relative;min-height:660px;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-img{position:absolute;inset:0;background:#14171a url('https://images.pexels.com/photos/27757293/pexels-photo-27757293.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(16,18,20,.95) 0%,rgba(18,21,24,.82) 40%,rgba(20,23,26,.45) 100%)}
+.hero .wrap{position:relative;z-index:2;padding:96px 30px}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-family:var(--en);font-size:14px;letter-spacing:.18em;color:var(--ember-l);margin-bottom:24px}
+.kicker::before{content:"";width:34px;height:2px;background:var(--ember)}
+.hero h1{font-weight:900;font-size:clamp(33px,5.2vw,60px);line-height:1.32;letter-spacing:.01em;text-shadow:0 2px 22px rgba(0,0,0,.4)}
+.hero h1 .accent{color:var(--ember)}
+.hero p.lead{margin-top:26px;max-width:560px;font-size:16.5px;line-height:2;color:#dfe3e6}
+.hero-actions{margin-top:38px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 30px;font-size:14px;font-weight:700;letter-spacing:.03em;transition:all .2s}
+.btn-p{background:var(--ember);color:#fff}.btn-p:hover{background:var(--ember-d)}
+.btn-o{border:1px solid rgba(255,255,255,.5);color:#fff}.btn-o:hover{background:rgba(255,255,255,.12)}
+
+/* stats */
+.stats{background:var(--graphite);color:#fff}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:36px 16px;text-align:center;border-right:1px solid var(--line-d)}
+.stat:last-child{border-right:0}
+.stat .num{font-family:var(--en);font-size:46px;font-weight:600;color:var(--ember-l);line-height:1}
+.stat .num small{font-size:18px;margin-left:2px}
+.stat .lab{margin-top:10px;font-size:13px;color:#aeb6bd}
+
+/* section base */
+section.block{padding:100px 0}
+.eyebrow{font-family:var(--en);font-size:14px;letter-spacing:.2em;color:var(--ember-d);font-weight:600;margin-bottom:14px}
+h2.sec{font-weight:900;font-size:clamp(25px,3.3vw,36px);line-height:1.4;letter-spacing:.01em;color:var(--ink)}
+.sec-sub{margin-top:16px;color:#454e54;font-size:16px;max-width:640px}
+
+/* intro split */
+.split{display:grid;grid-template-columns:1fr 1.05fr;gap:60px;align-items:center}
+.split .ph{aspect-ratio:5/4;background-size:cover;background-position:center;box-shadow:0 28px 56px -28px rgba(20,23,26,.55)}
+.about p{margin-top:22px;color:#3c454b;font-size:16px}
+
+/* services */
+.services{background:var(--paper-2)}
+.sgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:50px}
+.scard{background:var(--card);border:1px solid var(--line);display:flex;min-height:200px;overflow:hidden;transition:transform .22s,box-shadow .22s}
+.scard:hover{transform:translateY(-5px);box-shadow:0 24px 44px -26px rgba(20,23,26,.5)}
+.scard .img{width:42%;background-size:cover;background-position:center;flex-shrink:0}
+.scard .body{padding:28px 28px}
+.scard .no{font-family:var(--en);font-size:15px;color:var(--ember-d)}
+.scard h3{font-weight:700;font-size:20px;margin:6px 0 10px;color:var(--ink)}
+.scard p{font-size:14px;color:#4d565c;line-height:1.85}
+
+/* works */
+.wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
+.work{position:relative;aspect-ratio:4/3;background-size:cover;background-position:center;overflow:hidden}
+.work span{position:absolute;left:0;bottom:0;right:0;padding:30px 16px 14px;background:linear-gradient(transparent,rgba(16,18,20,.85));color:#fff;font-size:13.5px;font-weight:500}
+
+/* equipment */
+.equip{background:var(--ink);color:#e7eaec}
+.equip h2.sec{color:#fff}
+.equip .sec-sub{color:#aeb6bd}
+.etable{margin-top:46px;width:100%;border-collapse:collapse;font-size:14.5px}
+.etable th{text-align:left;font-family:var(--en);font-weight:600;letter-spacing:.08em;color:var(--ember-l);padding:14px 16px;border-bottom:2px solid var(--steel-l);font-size:13px}
+.etable td{padding:15px 16px;border-bottom:1px solid var(--steel);color:#cdd3d8}
+.etable td:first-child{font-weight:700;color:#fff;width:38%}
+.etable tr:hover td{background:rgba(255,255,255,.03)}
+
+/* certifications */
+.certs .cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+.cbadge{border:1px solid var(--line);background:var(--card);padding:30px 18px;text-align:center}
+.cbadge .ring{width:74px;height:74px;margin:0 auto 16px;border:3px solid var(--ember);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--en);font-weight:700;color:var(--ember-d);font-size:13px;line-height:1.1}
+.cbadge h4{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.cbadge p{font-size:12.5px;color:var(--muted)}
+.cnote{margin-top:26px;font-size:12.5px;color:var(--muted);text-align:center}
+
+/* company table */
+.company{background:var(--paper-2)}
+.ctable{margin-top:42px;width:100%;border-collapse:collapse;font-size:15px}
+.ctable th{text-align:left;vertical-align:top;width:26%;padding:18px 20px;background:var(--card);border:1px solid var(--line);font-weight:700;color:var(--ink);font-size:14px}
+.ctable td{padding:18px 20px;border:1px solid var(--line);background:#fff;color:#3c454b}
+
+/* access */
+.access .agrid{display:grid;grid-template-columns:1fr 1.25fr;gap:0;margin-top:48px;border:1px solid var(--line)}
+.ainfo{padding:42px 40px;background:var(--card)}
+.ainfo h3{font-weight:700;font-size:19px;margin-bottom:18px;color:var(--ink)}
+.ainfo dl{display:grid;grid-template-columns:84px 1fr;gap:12px 14px;font-size:14.5px}
+.ainfo dt{color:var(--ember-d);font-weight:700}
+.ainfo dd{color:#3c454b}
+.amap{min-height:360px}
+.amap iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(.25) contrast(1.05)}
+
+/* contact form */
+.contact{background:var(--graphite);color:#fff}
+.contact .chead{text-align:center;max-width:600px;margin:0 auto}
+.contact h2.sec{color:#fff}
+.contact .sec-sub{color:#aeb6bd;margin:16px auto 0}
+.form{max-width:720px;margin:48px auto 0;background:var(--ink);border:1px solid var(--line-d);padding:42px 42px 46px}
+.frow{margin-bottom:22px}
+.frow.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.frow label{display:block;font-size:13px;font-weight:500;color:#c7cdd2;margin-bottom:8px;letter-spacing:.03em}
+.frow label .req{color:var(--ember-l);font-size:11px;margin-left:6px;font-family:var(--en)}
+.frow input,.frow select,.frow textarea{width:100%;background:var(--steel);border:1px solid var(--steel-l);color:#fff;padding:13px 14px;font-family:var(--sans);font-size:14.5px;border-radius:0;transition:border-color .2s}
+.frow input:focus,.frow select:focus,.frow textarea:focus{outline:none;border-color:var(--ember)}
+.frow textarea{min-height:130px;resize:vertical}
+.fsubmit{width:100%;background:var(--ember);color:#fff;border:0;padding:17px;font-family:var(--sans);font-size:15.5px;font-weight:700;letter-spacing:.04em;cursor:pointer;transition:background .2s}
+.fsubmit:hover{background:var(--ember-d)}
+.fnote2{font-size:12px;color:#828a90;text-align:center;margin-top:16px}
+.fdone{display:none;background:rgba(217,83,30,.12);border:1px solid var(--ember);color:#fbe3d5;padding:20px;text-align:center;font-size:15px;margin-bottom:8px}
+
+/* footer */
+footer{background:var(--ink);color:#8a929a;font-size:13px;border-top:1px solid var(--line-d)}
+footer .wrap{padding:54px 30px 28px}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:34px;border-bottom:1px solid var(--line-d)}
+.fbrand .logo{font-family:var(--en);font-weight:700;font-size:24px;color:#fff}
+.fbrand .logo b{color:var(--ember)}
+.fbrand p{margin-top:14px;line-height:1.9;max-width:320px}
+.fcol h4{font-family:var(--en);color:#cfd5da;font-size:13px;letter-spacing:.1em;margin-bottom:14px;font-weight:600}
+.fcol a{display:block;padding:5px 0}.fcol a:hover{color:var(--ember-l)}
+.fnote{padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:#6a727a}
+.fnote .disc{color:var(--ember-l)}
+
+@media(max-width:880px){
+  .menu,.nav .nav-cta{display:none}
+  .split{grid-template-columns:1fr;gap:34px}
+  .sgrid,.wgrid,.certs .cgrid,.access .agrid{grid-template-columns:1fr}
+  .stats .wrap{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat{border-bottom:1px solid var(--line-d)}
+  .scard{flex-direction:column}.scard .img{width:100%;aspect-ratio:3/2}
+  .frow.two{grid-template-columns:1fr}
+  .ctable th{width:34%}
+  .fgrid{grid-template-columns:1fr;gap:26px}
+  section.block{padding:70px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="sample-bar">これは Claude Cowork で作成した <b>架空のサンプルサイト</b> です（T-tec は実在の企業ではありません）</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <span class="logo">T-<b>tec</b></span>
+      <span class="jp">溶接・製缶・鉄骨加工</span>
+    </div>
+    <nav class="menu">
+      <a href="#about">事業内容</a>
+      <a href="#services">製品・サービス</a>
+      <a href="#works">実績</a>
+      <a href="#equip">設備</a>
+      <a href="#certs">認証</a>
+      <a href="#company">会社概要</a>
+      <a href="#access">アクセス</a>
+    </nav>
+    <a href="#contact" class="nav-cta">お見積り・ご相談</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-veil"></div>
+  <div class="wrap">
+    <span class="kicker en">WELDING &amp; FABRICATION</span>
+    <h1>図面1枚から、<br><span class="accent">確かな技術</span>でカタチにする。</h1>
+    <p class="lead">溶接・製缶・鉄骨製作のT-tec。一品物の特注から量産まで、現場が求める「強くて美しい一台」を、有資格の職人がつくり上げます。</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-p">お見積り・ご相談</a>
+      <a href="#works" class="btn btn-o">製作実績を見る</a>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="num">42<small>年</small></div><div class="lab">創業からの実績</div></div>
+    <div class="stat"><div class="num">18<small>名</small></div><div class="lab">溶接有資格者</div></div>
+    <div class="stat"><div class="num">5<small>種超</small></div><div class="lab">対応鋼種（鉄/SUS/AL ほか）</div></div>
+    <div class="stat"><div class="num">600<small>社</small></div><div class="lab">取引実績</div></div>
+  </div>
+</section>
+
+<section class="block" id="about">
+  <div class="wrap split about">
+    <div class="ph" style="background-image:url('https://images.pexels.com/photos/17406672/pexels-photo-17406672.jpeg?auto=compress&cs=tinysrgb&w=1100')"></div>
+    <div>
+      <div class="eyebrow en">ABOUT T-TEC</div>
+      <h2 class="sec">「これ、つくれる？」に<br>応え続けて42年。</h2>
+      <p>T-tecは創業以来、溶接・製缶・鉄骨加工を一筋に手がけてきました。鉄・ステンレス・アルミ——素材を問わず、図面1枚、ラフスケッチ1枚からでもカタチにします。</p>
+      <p>強度も、仕上がりの美しさも妥協しない。だから「ここに頼めば間違いない」と、長くお付き合いいただくお客様がほとんどです。一品物の特注こそ、私たちの腕の見せどころです。</p>
+    </div>
+  </div>
+</section>
+
+<section class="block services" id="services">
+  <div class="wrap">
+    <div class="eyebrow en">PRODUCTS &amp; SERVICES</div>
+    <h2 class="sec">溶接を軸に、ものづくりを一貫対応</h2>
+    <p class="sec-sub">設計・材料手配から溶接・組立・仕上げ・塗装まで。窓口ひとつでまるごとお任せいただけます。</p>
+    <div class="sgrid">
+      <div class="scard">
+        <div class="img" style="background-image:url('https://images.pexels.com/photos/17656428/pexels-photo-17656428.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+        <div class="body"><div class="no en">01</div><h3>各種溶接加工</h3><p>半自動・TIG・アークまで対応。鉄・ステンレス・アルミの溶接を、有資格者が美しいビードで仕上げます。薄板から厚板まで。</p></div>
+      </div>
+      <div class="scard">
+        <div class="img" style="background-image:url('https://images.pexels.com/photos/2760343/pexels-photo-2760343.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+        <div class="body"><div class="no en">02</div><h3>製缶・板金加工</h3><p>タンク・架台・カバー・ダクトなどの製缶板金。切断・曲げ・溶接・組立を一貫し、寸法精度の高い製品をお届けします。</p></div>
+      </div>
+      <div class="scard">
+        <div class="img" style="background-image:url('https://images.pexels.com/photos/12951624/pexels-photo-12951624.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+        <div class="body"><div class="no en">03</div><h3>鉄骨・構造物製作</h3><p>階段・手すり・架構などの鉄骨構造物。現場で安全を支える部材を、強度計算の裏づけとともに製作します。</p></div>
+      </div>
+      <div class="scard">
+        <div class="img" style="background-image:url('https://images.pexels.com/photos/16630111/pexels-photo-16630111.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+        <div class="body"><div class="no en">04</div><h3>設計・特注対応</h3><p>図面がなくても大丈夫。ラフ・現物・要望から設計を起こし、一品物の特注品を形にします。小ロット・試作も歓迎。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="works" style="padding-bottom:104px">
+  <div class="wrap">
+    <div class="eyebrow en">WORKS</div>
+    <h2 class="sec">製作実績</h2>
+    <p class="sec-sub">業種・サイズを問わず、幅広い溶接・製缶のご依頼にお応えしてきました。</p>
+    <div class="wgrid">
+      <div class="work" style="background-image:url('https://images.pexels.com/photos/11951215/pexels-photo-11951215.jpeg?auto=compress&cs=tinysrgb&w=800')"><span>産業機械フレームの溶接組立</span></div>
+      <div class="work" style="background-image:url('https://images.pexels.com/photos/2760343/pexels-photo-2760343.jpeg?auto=compress&cs=tinysrgb&w=800')"><span>ステンレス製タンクの製缶</span></div>
+      <div class="work" style="background-image:url('https://images.pexels.com/photos/12951624/pexels-photo-12951624.jpeg?auto=compress&cs=tinysrgb&w=800')"><span>鉄骨階段・手すりの製作</span></div>
+      <div class="work" style="background-image:url('https://images.pexels.com/photos/30496227/pexels-photo-30496227.jpeg?auto=compress&cs=tinysrgb&w=800')"><span>特注金具・治具の量産</span></div>
+      <div class="work" style="background-image:url('https://images.pexels.com/photos/236705/pexels-photo-236705.jpeg?auto=compress&cs=tinysrgb&w=800')"><span>大型架台の現地据付</span></div>
+      <div class="work" style="background-image:url('https://images.pexels.com/photos/32845684/pexels-photo-32845684.jpeg?auto=compress&cs=tinysrgb&w=800')"><span>精密溶接・試作開発の支援</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="block equip" id="equip">
+  <div class="wrap">
+    <div class="eyebrow en">FACILITY</div>
+    <h2 class="sec">主要設備</h2>
+    <p class="sec-sub">溶接・切断・曲げ・測定まで、社内一貫加工を支える設備を揃えています。</p>
+    <table class="etable">
+      <thead><tr><th>設備名</th><th>仕様・台数</th><th>用途</th></tr></thead>
+      <tbody>
+        <tr><td>半自動溶接機</td><td>CO₂/MAG ・ 8台</td><td>鉄・薄板〜厚板の高能率溶接</td></tr>
+        <tr><td>TIG溶接機</td><td>交直両用 ・ 6台</td><td>ステンレス・アルミの精密溶接</td></tr>
+        <tr><td>レーザー切断機</td><td>2.0kW ・ 1台</td><td>鋼板の高精度切断</td></tr>
+        <tr><td>シャーリング</td><td>幅2,500mm ・ 1台</td><td>直線せん断・板取り</td></tr>
+        <tr><td>プレスブレーキ</td><td>100t ・ 2台</td><td>板金の曲げ加工</td></tr>
+        <tr><td>門型クレーン</td><td>2.8t ・ 工場内2基</td><td>大型ワークの吊り・搬送</td></tr>
+        <tr><td>三次元測定機</td><td>1台</td><td>出荷前の寸法検査・品質保証</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block certs" id="certs">
+  <div class="wrap">
+    <div class="eyebrow en">CERTIFICATION</div>
+    <h2 class="sec">認証・許可</h2>
+    <p class="sec-sub">品質・環境のマネジメント体制と、溶接の有資格者体制を整えています。</p>
+    <div class="cgrid">
+      <div class="cbadge"><div class="ring">ISO<br>9001</div><h4>ISO 9001</h4><p>品質マネジメントシステム</p></div>
+      <div class="cbadge"><div class="ring">ISO<br>14001</div><h4>ISO 14001</h4><p>環境マネジメントシステム</p></div>
+      <div class="cbadge"><div class="ring">ISO<br>3834</div><h4>ISO 3834-2</h4><p>溶接の品質要求事項</p></div>
+      <div class="cbadge"><div class="ring">JIS</div><h4>JIS 溶接技能者</h4><p>有資格者 18名 在籍</p></div>
+    </div>
+    <p class="cnote">※ 認証番号・登録内容はサンプル（架空）です。実際の認証ではありません。</p>
+  </div>
+</section>
+
+<section class="block company" id="company">
+  <div class="wrap">
+    <div class="eyebrow en">COMPANY</div>
+    <h2 class="sec">会社概要</h2>
+    <table class="ctable">
+      <tr><th>商号</th><td>T-tec株式会社（架空）</td></tr>
+      <tr><th>所在地</th><td>〒000-0000　広島県●●市●●町0-0-0　※架空の住所です</td></tr>
+      <tr><th>設立</th><td>1984年4月（創業42年）</td></tr>
+      <tr><th>資本金</th><td>2,000万円</td></tr>
+      <tr><th>代表者</th><td>代表取締役　山田 太郎</td></tr>
+      <tr><th>従業員数</th><td>32名（うち溶接有資格者18名）</td></tr>
+      <tr><th>事業内容</th><td>各種溶接加工／製缶・板金加工／鉄骨・構造物製作／設計・特注品製造</td></tr>
+      <tr><th>取引先</th><td>産業機械メーカー、建設会社、プラント関連 ほか（約600社）</td></tr>
+      <tr><th>認証</th><td>ISO 9001 ／ ISO 14001 ／ ISO 3834-2（いずれもサンプル）</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="block access" id="access">
+  <div class="wrap">
+    <div class="eyebrow en">ACCESS</div>
+    <h2 class="sec">アクセス</h2>
+    <div class="agrid">
+      <div class="ainfo">
+        <h3>本社・工場</h3>
+        <dl>
+          <dt>住所</dt><dd>〒000-0000<br>広島県●●市●●町0-0-0<br><span style="color:#8a929a;font-size:13px">※架空の住所です</span></dd>
+          <dt>TEL</dt><dd>000-000-0000</dd>
+          <dt>FAX</dt><dd>000-000-0001</dd>
+          <dt>営業時間</dt><dd>平日 8:00 - 17:30</dd>
+          <dt>定休日</dt><dd>土・日・祝（※繁忙期を除く）</dd>
+        </dl>
+      </div>
+      <div class="amap">
+        <iframe src="https://maps.google.com/maps?q=%E5%BA%83%E5%B3%B6%E7%9C%8C%E7%A6%8F%E5%B1%B1%E5%B8%82&z=12&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="地図（サンプル）"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block contact" id="contact">
+  <div class="wrap">
+    <div class="chead">
+      <div class="eyebrow en" style="color:var(--ember-l)">CONTACT</div>
+      <h2 class="sec">お見積り・ご相談はこちら</h2>
+      <p class="sec-sub">「こんなの作れる？」の段階で構いません。図面がなくてもOK。お気軽にお問い合わせください。</p>
+    </div>
+    <form class="form" id="ctf" onsubmit="return ttecSubmit(event)">
+      <div class="fdone" id="fdone">送信しました。担当者より2営業日以内にご連絡いたします。（※これはサンプルです。実際には送信されません）</div>
+      <div class="frow two">
+        <div><label>会社名</label><input type="text" name="company" placeholder="例：株式会社○○製作所"></div>
+        <div><label>お名前<span class="req">REQUIRED</span></label><input type="text" name="name" required placeholder="例：山田 太郎"></div>
+      </div>
+      <div class="frow two">
+        <div><label>メールアドレス<span class="req">REQUIRED</span></label><input type="email" name="email" required placeholder="name@example.com"></div>
+        <div><label>電話番号</label><input type="tel" name="tel" placeholder="000-0000-0000"></div>
+      </div>
+      <div class="frow">
+        <label>ご相談内容</label>
+        <select name="type">
+          <option>溶接加工について</option>
+          <option>製缶・板金について</option>
+          <option>鉄骨・構造物について</option>
+          <option>特注品・試作について</option>
+          <option>お見積り依頼</option>
+          <option>その他</option>
+        </select>
+      </div>
+      <div class="frow">
+        <label>お問い合わせ内容<span class="req">REQUIRED</span></label>
+        <textarea name="message" required placeholder="加工内容・数量・希望納期・材質などをご記入ください。図面はメール添付でもお送りいただけます。"></textarea>
+      </div>
+      <button type="submit" class="fsubmit">この内容で送信する</button>
+      <p class="fnote2">※ 送信ボタンの実際のメール送信には、サーバー側の send_mail.php 設定が必要です（noteの手順で解説）。</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <div class="logo">T-<b>tec</b></div>
+        <p>溶接・製缶・鉄骨加工のT-tec。図面1枚から、確かな技術でカタチにします。</p>
+      </div>
+      <div class="fcol">
+        <h4>SERVICES</h4>
+        <a href="#services">各種溶接加工</a>
+        <a href="#services">製缶・板金加工</a>
+        <a href="#services">鉄骨・構造物製作</a>
+        <a href="#services">設計・特注対応</a>
+      </div>
+      <div class="fcol">
+        <h4>COMPANY</h4>
+        <a href="#about">事業内容</a>
+        <a href="#equip">設備</a>
+        <a href="#certs">認証・許可</a>
+        <a href="#access">アクセス</a>
+      </div>
+    </div>
+    <div class="fnote">
+      <span>© 2026 T-tec Co., Ltd.（架空）</span>
+      <span class="disc">※ これは Claude Cowork で作成したサンプルサイトです。実在の企業・住所・電話番号・認証ではありません。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function ttecSubmit(e){
+  e.preventDefault();
+  var f=document.getElementById('ctf');
+  if(!f.checkValidity()){f.reportValidity();return false;}
+  document.getElementById('fdone').style.display='block';
+  f.querySelectorAll('input,select,textarea,button').forEach(function(el){el.disabled=true;});
+  document.getElementById('fdone').scrollIntoView({behavior:'smooth',block:'center'});
+  return false;
+}
+</script>
+</body>
+</html>
